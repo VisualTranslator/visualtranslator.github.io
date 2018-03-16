@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+
+    <head>
+
+        <title>css - How to make flexbox children 100% height of their parent? - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+        <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+        <meta name="referrer" content="origin" />
+
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://stackoverflow.com/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent"/>
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" />
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:domain" content="stackoverflow.com"/>
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="How to make flexbox children 100% height of their parent?" />
+        <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;m trying to fill the vertical space of a flex item inside a flexbox. 
+
+
+
+.container {
+  height: 200px;
+  width: 500px;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexb..." />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.sstatic.net/Js/stub.en.js?v=f973e22ce6bb"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=596945d5421b">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=94cd993a63cf">
+    
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How to make flexbox children 100% height of their parent?&#39;" href="/feeds/question/15381172">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({canOpenBounty:true,votesCast:[],totalCommentCount:5,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:15381172});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '15381172');
+                // TODO: There's a CR for replacing this with inline info on the question for moderators
+                // https://trello.com/c/ynDHhvrB/158-cr-move-the-mod-info-out-of-the-margin-and-into-the-post-estimate-needed
+                // Before we roll out the sidebar everywhere (or at least shortly after that?), we should implement it.
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+        
+             
+        
+                <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('1');
+                StackExchange.realtime.subscribeToTopBarNotifications('1');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","serverTime":1521216201,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"3a92f8f3748503c6839c544eea48d122ca55bf2318b23a079cc402a30ec82d18","tid":"144526cf-fa6a-4cc8-b693-e0a04b06378f","rep":984,"isRegistered":true,"userType":3,"userId":5922857,"accountId":7833991,"gravatar":"<div class=\"gravatar-wrapper-32\"><img src=\"https://i.stack.imgur.com/ilXse.png?s=32&amp;g=1\" alt=\"\" width=\"32\" height=\"32\"></div>","profileUrl":"https://stackoverflow.com/users/5922857/semanser","canSeeDeletedPosts":false,"canSeeNewHeaderDesign":true},"realtime":{"newest":false,"active":false,"tagged":true,"staleDisconnectIntervalInHours":0,"workerIframeDomain":"https://cdn.sstatic.net"},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4}}, {"site":{"allowImageUploads":true,"commentHighlightingWithCSS":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"topBar":{"showNewFeatureNotice":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"paths":{},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"},"subscriptions":{}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"85276a7a8988","js/moderator.en.js":"438d1ca5ab76","js/full-anon.en.js":"cb587e27706d","js/full.en.js":"e34e6027790f","js/wmd.en.js":"e0774ad6bc7f","js/third-party/jquery.autocomplete.min.js":"bdb258e949a8","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"fa364aff476f","js/help.en.js":"a1c2d4ed1321","js/tageditor.en.js":"09f8228c480a","js/tageditornew.en.js":"048e2d0a1a5e","js/inline-tag-editing.en.js":"e7aa31e8eba1","js/revisions.en.js":"a7ac7cb26f15","js/review.en.js":"3a07b23b8b35","js/tagsuggestions.en.js":"bb4721d888d2","js/post-validation.en.js":"2c7caee52f63","js/explore-qlist.en.js":"9c64817b25fa","js/events.en.js":"7dcca426b4d1","js/keyboard-shortcuts.en.js":"3469206d4025","js/external-editor.en.js":"7df236ec94fc","js/adops.en.js":"22a9bd59b1e9","js/external-editor.en.js":"7df236ec94fc","js/snippet-javascript.en.js":"4ceca4bd1d0a","js/snippet-javascript-codemirror.en.js":"5d101f6078f0"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    </head>
+    <body class="question-page new-topbar">
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar _fixed">
+    <div class="-container">
+        <div class="-main">
+                            <a href="https://stackoverflow.com" class="-logo js-gps-track"
+                    data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+                    <span class="-img _glyph">Stack Overflow</span>
+                </a>
+
+
+                <nav class="navigation" role="navigation" aria-label="site navigation">
+                    <ol class="-list">
+        <li class="-item _current">
+            <a id="nav-questions" href="/questions" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+        </li>
+        <li class="-item">
+            <a id="nav-jobs" href="/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Developer Jobs</a>
+        </li>
+        <li class="-item">
+            <a id="nav-tags" href="/tags" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+        </li>
+        <li class="-item">
+            <a id="nav-users" href="/users" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+        </li>
+                    </ol>
+                </nav>
+
+        </div>
+
+            <form id="search" action="/search" method="get" class="searchbar" autocomplete="off" role="search">
+                    <input name="q" type="text" placeholder="Search…" value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field" />
+                    <button type="submit" aria-label="Search..." class="btn-topbar-primary js-search-submit"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.86 11.32L18 16.5 16.5 18l-5.18-5.14v-.35a7 7 0 1 1 1.19-1.19h.35zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"/></svg></button>
+            </form>
+
+        
+
+
+    
+
+<div class="-actions">
+            <a href="/users/5922857/semanser" class="my-profile js-gps-track" data-gps-track="profile_summary.click()">
+            <div class="gravatar-wrapper-24" title="semanser"><img src="https://i.stack.imgur.com/ilXse.png?s=48&amp;g=1" alt="" width="24" height="24" class="-avatar js-avatar-me"></div>
+                <div class="-rep js-header-rep" title="your reputation: 984">984</div>
+                    <div class="-badges">
+<span title="5 silver badges"><span class="badge2">&#9679;</span><span class="badgecount">5</span></span><span title="23 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">23</span></span>                    </div>
+            </a>
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="https://stackoverflow.com">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+            <a href="https://stackoverflow.com/help" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:14 })"
+>help</a>
+                    <a href="https://chat.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="https://stackoverflow.com/users/logout" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:8 })"
+>log out</a>
+    </div>
+    <a href="https://stackoverflow.com"
+       class="current-site-link site-link js-gps-track"
+       data-id="1"
+       data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-stackoverflow site-icon" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://meta.stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="552"
+       data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-stackoverflowmeta site-icon" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+                    <a href="https://stackexchange.com/users/7833991/?tab=accounts">your communities</a>
+            </h3>
+
+                <a href="#" id="edit-pinned-sites">edit</a>
+                <a href="#" id="cancel-pinned-sites" style="display: none;">cancel</a>
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <ul class="my-sites">
+                        <li>
+                                <a href="https://stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="1"
+       data-gps-track="site.switch({ target_site:1, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-stackoverflow site-icon" title="Stack Overflow"></div>
+        Stack Overflow
+            <span class="rep-score">984</span>
+    </a>
+
+                        </li>
+                        <li>
+                                <a href="https://askubuntu.com"
+       class="site-link js-gps-track"
+       data-id="89"
+       data-gps-track="site.switch({ target_site:89, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-askubuntu site-icon" title="Ask Ubuntu"></div>
+        Ask Ubuntu
+            <span class="rep-score">101</span>
+    </a>
+
+                        </li>
+                        <li>
+                                <a href="https://gamedev.stackexchange.com"
+       class="site-link js-gps-track"
+       data-id="53"
+       data-gps-track="site.switch({ target_site:53, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-gamedev site-icon" title="Game Development"></div>
+        Game Development
+            <span class="rep-score">101</span>
+    </a>
+
+                        </li>
+                        <li>
+                                <a href="https://math.stackexchange.com"
+       class="site-link js-gps-track"
+       data-id="69"
+       data-gps-track="site.switch({ target_site:69, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-math site-icon" title="Mathematics"></div>
+        Mathematics
+            <span class="rep-score">101</span>
+    </a>
+
+                        </li>
+                        <li>
+                                <a href="https://ru.stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="609"
+       data-gps-track="site.switch({ target_site:609, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-ru site-icon" title="Stack Overflow на русском"></div>
+        Stack Overflow на русском
+            <span class="rep-score">101</span>
+    </a>
+
+                        </li>
+                </ul>
+                    <div class="pinned-site-editor-container" style="display: none;">
+                        <input id="js-site-search-txt"
+                                type="text"
+                                class="site-filter-input"
+                                value=""
+                                placeholder="Add a Stack Exchange community"/>
+                        <input type="submit" id="pin-site-btn" value="Add" disabled="disabled"/>
+                        <ul class="js-found-sites found-sites"></ul>
+                        <ul class="pinned-site-list sortable" data-custom-list="False">
+                        </ul>
+                        <input type="submit" value="Save" id="save-pinned-sites-btn" disabled="disabled"/>
+                        <a href="#" id="reset-pinned-sites">reset to default list</a>
+                    </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+        </div>
+        <ol class="-list">
+    <li class="-item">
+        <a href="https://stackexchange.com/users/7833991?tab=inbox" class="-link js-inbox-button" title="Recent inbox messages">
+            <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M15.19 1H4.63c-.85 0-1.6.54-1.85 1.35L0 10.79V15c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-4.21l-2.87-8.44A2 2 0 0 0 15.19 1zm-.28 10l-2 2h-6l-2-2H1.96L4.4 3.68A1 1 0 0 1 5.35 3h9.12a1 1 0 0 1 .95.68L17.86 11h-2.95z"/></svg>
+            <span class="indicator-badge js-unread-count _important" style="display: none;"></span>
+        </a>
+    </li>
+    <li class="-item">
+        <a href="https://stackexchange.com/users/7833991?tab=reputation" class="-link js-achievements-button" title="Recent achievements: reputation, badges, and privileges earned" data-unread-class="_highlighted-positive">
+            <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"/></svg>
+            <span class="indicator-badge js-unread-count _positive" style="display: none;"></span>
+        </a>
+    </li>
+
+    <li class="-item">
+        <a href="/review" class="-link js-gps-track js-review-button" title="Review queues - help improve the site" data-gps-track="review_popup.click({ in_danger: false })">
+            <svg aria-hidden="true" class="svg-icon iconReviewQueue" width="18" height="18" viewBox="0 0 18 18"><path d="M16 7.5l-5 4.97-1.79-1.77a1 1 0 0 0-1.4 0l-2.1 2.1a1 1 0 0 0 0 1.4L8.5 17H2a2 2 0 0 1-2-2V3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v4.5zM12 7H2v2h10V7zm2-4H2v2h12V3zM2 11v2h3v-2H2zm16-.5l-7 7-4-4L8.5 12l2.5 2.5L16.5 9l1.5 1.5z"/></svg>
+        </a>
+        
+    </li>
+    <li class="-item"><a href="#" class="-link js-help-button" title="Help Center and other resources">
+        <svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8a5.8 5.8 0 0 1-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66a5.29 5.29 0 0 1 1.43-1.22c.16-.12.28-.25.38-.39a1.34 1.34 0 0 0 .02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"/></svg>
+    </a></li>
+
+    <li class="-item">
+        <a href="https://stackexchange.com" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 172 Stack Exchange sites">
+            <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"/></svg>
+        </a>
+    </li>
+        </ol>
+    </nav>
+</div>
+
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+        StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+
+
+    <div class="container _full ">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+            
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <div class="inner-content clearfix">
+        <div id="question-header">
+                    <h1 itemprop="name"><a href="/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent" class="question-hyperlink">How to make flexbox children 100% height of their parent?</a></h1>
+
+            
+<div class="aside-cta" role="navigation" aria-label="ask new question">
+        <a href="/questions/ask" class="btn" >Ask Question</a>
+</div>
+
+        </div>
+            <div id="mainbar" role="main" aria-label="question and answers">
+
+            
+
+<div class="question" data-questionid="15381172"  id="question">
+
+        
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="15381172">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">227</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>63</b></div>
+
+
+</div>
+
+            </div>
+
+            
+<div class="postcell post-layout--right">
+    <div class="post-text" itemprop="text">
+
+<p>I'm trying to fill the vertical space of a flex item inside a flexbox. </p>
+
+<p><div class="snippet" data-lang="js" data-hide="false" data-console="true" data-babel="false">
+<div class="snippet-code">
+<pre class="snippet-code-css lang-css prettyprint-override"><code>.container {
+  height: 200px;
+  width: 500px;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.flex-1 {
+  width: 100px;
+  background-color: blue;
+}
+.flex-2 {
+  position: relative;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: red;
+}
+.flex-2-child {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}</code></pre>
+<pre class="snippet-code-html lang-html prettyprint-override"><code>&lt;div class="container"&gt;
+  &lt;div class="flex-1"&gt;&lt;/div&gt;
+  &lt;div class="flex-2"&gt;
+    &lt;div class="flex-2-child"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</p>
+
+<p>And here's the <a href="http://jsfiddle.net/2ZDuE/" rel="noreferrer">JSFiddle</a></p>
+
+<p><code>flex-2-child</code> doesn't fill the required height except in the two cases where: </p>
+
+<ol>
+<li><code>flex-2</code> has a height of 100% (which is weird because a flex item has a 100% by default + it is buggy in Chrome)</li>
+<li><code>flex-2-child</code> has a position absolute which is also inconvenient</li>
+</ol>
+
+<p>This doesn't work in Chrome or Firefox currently.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/css" class="post-tag" title="show questions tagged &#39;css&#39;" rel="tag">css</a> <a href="/questions/tagged/css3" class="post-tag" title="show questions tagged &#39;css3&#39;" rel="tag">css3</a> <a href="/questions/tagged/flexbox" class="post-tag" title="show questions tagged &#39;flexbox&#39;" rel="tag">flexbox</a> 
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/q/15381172/5922857" title="short permalink to this question" class="short-link" id="link-post-15381172">share</a><span class="lsep">|</span><a href="/posts/15381172/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="15381172">flag</a></div>        
+    </div>
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/15381172/revisions" title="show all edits to this post">edited <span title="2017-02-27 02:00:18Z" class="relativetime">Feb 27 '17 at 2:00</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2756409/tylerh"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/UIrGI.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2756409/tylerh">TylerH</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 13,685" dir="ltr">13.7k</span><span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span><span title="44 silver badges"><span class="badge2"></span><span class="badgecount">44</span></span><span title="63 bronze badges"><span class="badge3"></span><span class="badgecount">63</span></span>
+        </div>
+    </div>
+</div>    </div>
+    <div class="post-signature owner grid--cell fl0">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-03-13 09:19:00Z" class="relativetime">Mar 13 '13 at 9:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/542642/raz"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/f0aafaacc0617bb1b00d41b4db27d69a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/542642/raz">Raz</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,401</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+
+                
+    <div class="post-layout--right">
+	    <div id="comments-15381172" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+
+
+    <li id="comment-21738339" class="comment js-comment " data-comment-id="21738339">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">what is the problem with using height:100%; for .flex-2 ?</span>
+                    &ndash;&nbsp;<a href="/users/985241/rmagnum2002"
+                       title="9,031 reputation"
+                       class="comment-user">rmagnum2002</a>
+                <span class="comment-date" dir="ltr"><span title="2013-03-13 09:31:53Z" class="relativetime-clean">Mar 13 '13 at 9:31</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-21738833" class="comment js-comment " data-comment-id="21738833">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It defies the purpose of the flex item which is to fill the content by itself and it&#39;s giving me the weirdest bug in chrome where the height goes back to zero whenever I resize the window</span>
+                    &ndash;&nbsp;<a href="/users/542642/raz"
+                       title="1,401 reputation"
+                       class="comment-user owner">Raz</a>
+                <span class="comment-date" dir="ltr"><span title="2013-03-13 09:46:17Z" class="relativetime-clean">Mar 13 '13 at 9:46</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-21744942" class="comment js-comment " data-comment-id="21744942">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Firefox versions that still follow the spec from 2009 (display: box) behave very differently from versions that follow the modern spec.  If FF is misbehaving, I&#39;d recommend dropping support for it.</span>
+                    &ndash;&nbsp;<a href="/users/1652962/cimmanon"
+                       title="49,164 reputation"
+                       class="comment-user">cimmanon</a>
+                <span class="comment-date" dir="ltr"><span title="2013-03-13 12:30:51Z" class="relativetime-clean">Mar 13 '13 at 12:30</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-21747615" class="comment js-comment " data-comment-id="21747615">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">3</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Actually, the latest version of Firefox is the only one working properly</span>
+                    &ndash;&nbsp;<a href="/users/542642/raz"
+                       title="1,401 reputation"
+                       class="comment-user owner">Raz</a>
+                <span class="comment-date" dir="ltr"><span title="2013-03-13 13:36:07Z" class="relativetime-clean">Mar 13 '13 at 13:36</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-59766758" class="comment js-comment " data-comment-id="59766758">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">1</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Currently, there are significant differences in behavior among browsers when it comes to rendering percentage heights in flexbox: <a href="http://stackoverflow.com/a/35537510/3597276">stackoverflow.com/a/35537510/3597276</a></span>
+                    &ndash;&nbsp;<a href="/users/3597276/michael-b"
+                       title="105,528 reputation"
+                       class="comment-user">Michael_B</a>
+                <span class="comment-date" dir="ltr"><span title="2016-03-17 12:07:21Z" class="relativetime-clean">Mar 17 '16 at 12:07</span></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-15381172" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-15381172" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>              <div class="bounty-notification post-layout--right">
+          <div style="margin-top:20px">
+            <a class="bounty-link bounty" title="offer some of your reputation for better answers">
+                start a bounty
+            </a>
+          </div>
+          </div>
+    </div>
+</div>
+
+            <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2 data-answercount="7">
+                                7 Answers
+                                <span style="display:none;" itemprop="answerCount">7</span>
+                        </h2>
+                        <div>
+                            
+<div id="tabs">
+        <a href="/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere " href="/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+    </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+  
+<a name="15389545"></a>
+<div id="answer-15389545" class="answer" data-answerid="15389545"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="15389545">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">182</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>I have answered a similar question <a href="https://stackoverflow.com/a/15388247/295813">here</a>. </p>
+
+<p>I know you have already said <code>position: absolute;</code> is inconvenient but it works. See below for further information on fixing the resize issue.</p>
+
+<p>Also see this <a href="http://jsfiddle.net/poztin/MFHj7/1/" rel="noreferrer">jsFiddle</a> for a demo, although I have only added webkit prefixes so open in Chrome.</p>
+
+<p>You basically have 2 issues which I will deal with separately.</p>
+
+<ol>
+<li><strong>Getting the child of a flex-item to fill height 100%</strong>
+
+<ul>
+<li>Set <code>position: relative;</code> on the parent of the child.</li>
+<li>Set <code>position: absolute;</code> on the child.</li>
+<li>You can then set width/height as required (100% in my sample).</li>
+</ul></li>
+<li><strong>Fixing the resize scrolling "quirk" in Chrome</strong>
+
+<ul>
+<li>Put <code>overflow-y: auto;</code> on the scrollable div.</li>
+<li>The scrollable div must have an explicit height specified. My sample already has height 100% but if none is already applied you can specify <code>height: 0;</code></li>
+</ul></li>
+</ol>
+
+<p>See this <a href="https://stackoverflow.com/a/14964944/295813">answer</a> for more information on the scrolling issue.</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/15389545/5922857" title="short permalink to this answer" class="short-link" id="link-post-15389545">share</a><span class="lsep">|</span><a href="/posts/15389545/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="15389545">flag</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/15389545/revisions" title="show all edits to this post">edited <span title="2017-05-23 12:18:21Z" class="relativetime">May 23 '17 at 12:18</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/-1/community"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/-1/community">Community</a><span class="mod-flair" title="moderator">&#9830;</span>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-03-13 15:29:26Z" class="relativetime">Mar 13 '13 at 15:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/295813/brett-postin"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/f7d03c076c1fb195896dc1ace051458e?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/295813/brett-postin">Brett Postin</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">6,589</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="46 silver badges"><span class="badge2"></span><span class="badgecount">46</span></span><span title="82 bronze badges"><span class="badge3"></span><span class="badgecount">82</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-15389545" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+
+
+    <li id="comment-29472264" class="comment js-comment " data-comment-id="29472264">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="warm">9</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Point 1) works perfectly in Chrome, Firefox doesn&#39;t need the position absolute.</span>
+                    &ndash;&nbsp;<a href="/users/269912/yuri"
+                       title="243 reputation"
+                       class="comment-user">yuri</a>
+                <span class="comment-date" dir="ltr"><span title="2013-11-06 20:08:27Z" class="relativetime-clean">Nov 6 '13 at 20:08</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-60029866" class="comment js-comment " data-comment-id="60029866">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">2</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This is so strange, that with <i>FF</i> it works excellently with <code>height:100%</code> on child of <code>flexbox</code>, but with Chrome you need additional trick.</span>
+                    &ndash;&nbsp;<a href="/users/4354249/farside"
+                       title="4,476 reputation"
+                       class="comment-user">Farside</a>
+                <span class="comment-date" dir="ltr"><span title="2016-03-24 10:45:56Z" class="relativetime-clean">Mar 24 '16 at 10:45</span></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-82565560" class="comment js-comment " data-comment-id="82565560">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">chrome is a very terrible piece of sw. Not as terrible as explorer, but very, very close. thanks.</span>
+                    &ndash;&nbsp;<a href="/users/3357358/prefijo-sustantivo"
+                       title="127 reputation"
+                       class="comment-user">Prefijo Sustantivo</a>
+                <span class="comment-date" dir="ltr"><span title="2017-12-13 21:08:54Z" class="relativetime-clean">Dec 13 '17 at 21:08</span></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-15389545" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-15389545" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="16771324"></a>
+<div id="answer-16771324" class="answer" data-answerid="16771324"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="16771324">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">146</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>If I understand correctly, you want flex-2-child to fill the height and width of its parent, so that the red area is fully covered by the green?</p>
+
+<p>If so, you just need to set flex-2 to use flexbox:</p>
+
+<pre><code>.flex-2 {
+    display: flex;  
+}
+</code></pre>
+
+<p>Then tell flex-2-child to become flexible:</p>
+
+<pre><code>.flex-2-child {    
+    flex: 1;
+}
+</code></pre>
+
+<p>See <a href="http://jsfiddle.net/2ZDuE/10/" rel="noreferrer">http://jsfiddle.net/2ZDuE/10/</a></p>
+
+<p>The reason is that flex-2-child is not a flexbox item, but its parent is. </p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/16771324/5922857" title="short permalink to this answer" class="short-link" id="link-post-16771324">share</a><span class="lsep">|</span><a href="/posts/16771324/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="16771324">flag</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-05-27 10:38:08Z" class="relativetime">May 27 '13 at 10:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/530681/david-storey"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/4dba8da2d14d1cc0af4387e17d7429c5?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/530681/david-storey">David Storey</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 12,969" dir="ltr">13k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span><span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-16771324" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+
+
+    <li id="comment-39934685" class="comment js-comment " data-comment-id="39934685">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">4</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Excellent. Unlike Ilya&#39;s answer, this works even if <code>.container</code> doesn&#39;t have a height specified.</span>
+                    &ndash;&nbsp;<a href="/users/132208/tamlyn"
+                       title="9,515 reputation"
+                       class="comment-user">Tamlyn</a>
+                <span class="comment-date" dir="ltr"><span title="2014-08-29 14:48:37Z" class="relativetime-clean">Aug 29 '14 at 14:48</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-41475159" class="comment js-comment " data-comment-id="41475159">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">How can I do the same, just with a height of 100% and every child is 50/50 ?</span>
+                    &ndash;&nbsp;<a href="/users/281965/ricky-levi"
+                       title="1,969 reputation"
+                       class="comment-user">Ricky Levi</a>
+                <span class="comment-date" dir="ltr"><span title="2014-10-16 20:46:48Z" class="relativetime-clean">Oct 16 '14 at 20:46</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-49318308" class="comment js-comment " data-comment-id="49318308">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">2</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Be aware that if you use &quot;align-items: center&quot; you won&#39;t be able to use this fix since your items will now become equal-height.</span>
+                    &ndash;&nbsp;<a href="/users/64240/neil-monroe"
+                       title="966 reputation"
+                       class="comment-user">Neil Monroe</a>
+                <span class="comment-date" dir="ltr"><span title="2015-06-03 16:56:35Z" class="relativetime-clean">Jun 3 '15 at 16:56</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-50925359" class="comment js-comment " data-comment-id="50925359">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It&#39;s interesting that a container can be a flex parent and a flex child at the same time, but very useful.</span>
+                    &ndash;&nbsp;<a href="/users/586086/andrew-mao"
+                       title="20,347 reputation"
+                       class="comment-user">Andrew Mao</a>
+                <span class="comment-date" dir="ltr"><span title="2015-07-17 16:04:55Z" class="relativetime-clean">Jul 17 '15 at 16:04</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-52794631" class="comment js-comment " data-comment-id="52794631">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="warm">5</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@NeilMonroe You can still use <code>align-items: center</code> if you use <code>align-self: stretch</code> on just the one child.</span>
+                    &ndash;&nbsp;<a href="/users/122422/b-t"
+                       title="23,254 reputation"
+                       class="comment-user">B T</a>
+                <span class="comment-date" dir="ltr"><span title="2015-09-08 20:04:55Z" class="relativetime-clean">Sep 8 '15 at 20:04</span></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-16771324" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-16771324" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="32466333"></a>
+<div id="answer-32466333" class="answer" data-answerid="32466333"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="32466333">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">43</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>Similar to David Storey's answer, my work around is:</p>
+
+<pre><code>.flex-2
+{
+ align-items: stretch;
+ display: flex;
+}
+</code></pre>
+
+<p>Alternatively to <code>align-items</code>, you can use <code>align-self</code> just on the <code>.flex-2-child</code> item you want stretched.</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/32466333/5922857" title="short permalink to this answer" class="short-link" id="link-post-32466333">share</a><span class="lsep">|</span><a href="/posts/32466333/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="32466333">flag</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/32466333/revisions" title="show all edits to this post">edited <span title="2017-08-02 19:32:57Z" class="relativetime">Aug 2 '17 at 19:32</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/606371/john"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/b20869146dafd8560084313d4f961ce7?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/606371/john">John</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,623</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="42 silver badges"><span class="badge2"></span><span class="badgecount">42</span></span><span title="97 bronze badges"><span class="badge3"></span><span class="badgecount">97</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-09-08 20:04:03Z" class="relativetime">Sep 8 '15 at 20:04</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/122422/b-t"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/da9a54a87c0541814289cc1fb434de11?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/122422/b-t">B T</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 23,254" dir="ltr">23.3k</span><span title="23 gold badges"><span class="badge1"></span><span class="badgecount">23</span></span><span title="121 silver badges"><span class="badge2"></span><span class="badgecount">121</span></span><span title="152 bronze badges"><span class="badge3"></span><span class="badgecount">152</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-32466333" class="comments js-comments-container  dno">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-32466333" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-32466333" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="18866957"></a>
+<div id="answer-18866957" class="answer" data-answerid="18866957"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="18866957">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">16</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>I suppose that Chrome's behavior is more consistent with the CSS spec (though it's less intuitive). According to Flexbox spec, the default <code>stretch</code> value of <code>align-self</code> property <a href="http://www.w3.org/TR/css3-flexbox/#align-stretch" rel="noreferrer">changes only the <em>used</em> value</a> of the element's "cross size property" (<code>height</code>, in this case). And, as I understand <a href="http://www.w3.org/TR/CSS2/visudet.html#x12" rel="noreferrer">the CSS2.1 spec</a>, the percentage heights are calculated from the <em>specified</em> value of the parent's <code>height</code>, not its used value. The specified value of the parent's <code>height</code> isn't affected by any flex properties and is still <code>auto</code>.</p>
+
+<p>Setting explicit <code>height: 100%</code> makes it <em>formally</em> possible to calculate the percentage height of the child, just like setting <code>height: 100%</code> to <code>html</code> makes it possible to calculate the percentage height of <code>body</code> in CSS2.1.</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/18866957/5922857" title="short permalink to this answer" class="short-link" id="link-post-18866957">share</a><span class="lsep">|</span><a href="/posts/18866957/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="18866957">flag</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-09-18 08:08:27Z" class="relativetime">Sep 18 '13 at 8:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2533215/ilya-streltsyn"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/cf5bc50f76b328796bf7e380c77f1028?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2533215/ilya-streltsyn">Ilya Streltsyn</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8,865</span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="44 bronze badges"><span class="badge3"></span><span class="badgecount">44</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-18866957" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="1"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+
+
+    <li id="comment-31482472" class="comment js-comment " data-comment-id="31482472">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">2</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Exactly! To put this into practice, just add <code>height:100%</code> to <code>.flex-2</code>. Here&#39;s the <a href="http://jsfiddle.net/2ZDuE/114/" rel="nofollow noreferrer">jsfiddle</a>.</span>
+                    &ndash;&nbsp;<a href="/users/977591/courtdemone"
+                       title="3,016 reputation"
+                       class="comment-user">CourtDemone</a>
+                <span class="comment-date" dir="ltr"><span title="2014-01-06 20:43:51Z" class="relativetime-clean">Jan 6 '14 at 20:43</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-53028351" class="comment js-comment " data-comment-id="53028351">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="warm">5</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><code>height:100%</code> does not work on Safari.</span>
+                    &ndash;&nbsp;<a href="/users/443602/jordan"
+                       title="4,412 reputation"
+                       class="comment-user">Jordan</a>
+                <span class="comment-date" dir="ltr"><span title="2015-09-15 13:29:20Z" class="relativetime-clean">Sep 15 '15 at 13:29</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-61574602" class="comment js-comment " data-comment-id="61574602">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="warm">6</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Chrome&#39;s behavior is more consistent with <i>Chrome Team&#39;s interpretation of</i> the CSS spec. While it could be interpreted that way, there are far better ways of interpreting it, any of which wouldn&#39;t have trapped us into this bazaar, annoying, and irksome behavior. They should have thought it through more.</span>
+                    &ndash;&nbsp;<a href="/users/387233/wraithkenny"
+                       title="432 reputation"
+                       class="comment-user">WraithKenny</a>
+                <span class="comment-date" dir="ltr"><span title="2016-05-03 18:05:29Z" class="relativetime-clean">May 3 '16 at 18:05</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-67079961" class="comment js-comment " data-comment-id="67079961">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Jordan What have you used to fix this is Safari?</span>
+                    &ndash;&nbsp;<a href="/users/4970028/rick-doesburg"
+                       title="492 reputation"
+                       class="comment-user">Rick Doesburg</a>
+                <span class="comment-date" dir="ltr"><span title="2016-10-06 13:21:09Z" class="relativetime-clean">Oct 6 '16 at 13:21</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-67195032" class="comment js-comment " data-comment-id="67195032">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">1</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@RickDoesburg, this was more than a year ago, but I believe that I had to resort to fixed height elements. I wish these browsers would get their act together. I&#39;m really starting to dislike the mobile space.</span>
+                    &ndash;&nbsp;<a href="/users/443602/jordan"
+                       title="4,412 reputation"
+                       class="comment-user">Jordan</a>
+                <span class="comment-date" dir="ltr"><span title="2016-10-10 12:03:02Z" class="relativetime-clean">Oct 10 '16 at 12:03</span></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-18866957" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-18866957" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator ">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href=# onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="15381916"></a>
+<div id="answer-15381916" class="answer" data-answerid="15381916"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="15381916">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>An idea would be that <code>display:flex;</code> with <code>flex-direction: row;</code> is filling the <code>container</code> div with <code>.flex-1</code> and <code>.flex-2</code>, but that does not mean that <code>.flex-2</code> has a default <code>height:100%;</code> even if it is extended to full height and to have a child element (<code>.flex-2-child</code>) with <code>height:100%;</code> you'll need to set the parent to <code>height:100%;</code> or use <code>display:flex;</code> with <code>flex-direction: row;</code> on the <code>.flex-2</code> div too.</p>
+
+<p>From what I know <code>display:flex</code> will not extend all your child elements height to 100%.</p>
+
+<p>A small demo, removed the height from <code>.flex-2-child</code> and used <code>display:flex;</code> on <code>.flex-2</code>:
+<a href="http://jsfiddle.net/2ZDuE/3/" rel="nofollow">http://jsfiddle.net/2ZDuE/3/</a></p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/15381916/5922857" title="short permalink to this answer" class="short-link" id="link-post-15381916">share</a><span class="lsep">|</span><a href="/posts/15381916/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="15381916">flag</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/15381916/revisions" title="show all edits to this post">edited <span title="2016-01-21 23:24:10Z" class="relativetime">Jan 21 '16 at 23:24</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2901251/dinesa"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/c9ddca78aa14ff808e54f3d06609f750?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2901251/dinesa">dinesa</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">10</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-03-13 09:54:47Z" class="relativetime">Mar 13 '13 at 9:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/985241/rmagnum2002"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/802150025e2e8b524e4d5f01259738dc?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/985241/rmagnum2002">rmagnum2002</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,031</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="39 silver badges"><span class="badge2"></span><span class="badgecount">39</span></span><span title="71 bronze badges"><span class="badge3"></span><span class="badgecount">71</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-15381916" class="comments js-comments-container  dno">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-15381916" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-15381916" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="34837676"></a>
+<div id="answer-34837676" class="answer" data-answerid="34837676"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="34837676">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p><strong>html</strong></p>
+
+<pre><code>&lt;div class="container"&gt;
+    &lt;div class="flex-1"&gt;&lt;/div&gt;
+    &lt;div class="flex-2"&gt;
+        &lt;div class="flex-2-child"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>css</strong></p>
+
+<pre><code>.container {
+    height: 200px;
+    width: 500px;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.flex-1 {
+   flex:1 0 100px;
+    background-color: blue;
+}
+.flex-2 {
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1 0 100%;
+    background-color: red;
+}
+.flex-2-child {
+    flex: 1 0 100%;
+    height:100%;
+    background-color: green;
+}
+</code></pre>
+
+<p><a href="http://jsfiddle.net/2ZDuE/750/" rel="nofollow">http://jsfiddle.net/2ZDuE/750/</a></p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/34837676/5922857" title="short permalink to this answer" class="short-link" id="link-post-34837676">share</a><span class="lsep">|</span><a href="/posts/34837676/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="34837676">flag</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2016-01-17 11:13:12Z" class="relativetime">Jan 17 '16 at 11:13</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/1540570/carol-mckay"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/40ebcd288c29b50fae22638600e0145b?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/1540570/carol-mckay">Carol McKay</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,226</span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-34837676" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+
+
+    <li id="comment-61649398" class="comment js-comment " data-comment-id="61649398">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">3</span>
+            </div>
+                <div class="comment-voting">
+                        <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                </div>
+                            <div class="comment-flagging">
+                        <a class="comment-flag" title="Flag this comment for serious problems or moderator attention">flag</a>
+                </div>
+        </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">not working...?</span>
+                    &ndash;&nbsp;<a href="/users/1263145/ahmed-anas"
+                       title="2,247 reputation"
+                       class="comment-user">Ahmed-Anas</a>
+                <span class="comment-date" dir="ltr"><span title="2016-05-05 12:51:23Z" class="relativetime-clean">May 5 '16 at 12:51</span></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-34837676" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-34837676" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="34026625"></a>
+<div id="answer-34026625" class="answer downvoted-answer" data-answerid="34026625"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="34026625">
+        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-7</span>
+        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>This is my solution using <a href="http://www.css.plus" rel="nofollow">css+</a></p>
+
+<p>First of all if first child (flex-1) should be 100px shouldn't be flex.
+In <a href="http://www.css.plus" rel="nofollow">css+</a> in fact you can set flexible and/or static elements (columns or rows) and your example become as easy as this:</p>
+
+<pre><code>&lt;div class="container"&gt;
+  &lt;div class="EXTENDER"&gt;
+    &lt;div class="COLS"&gt;
+      &lt;div class="CELL _100px" style="background-color:blue"&gt;100px&lt;/div&gt;
+      &lt;div class="CELL _FLEX" style="background-color:red"&gt;flex&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>container css:</p>
+
+<pre><code>.container {
+    height: 200px;
+    width: 500px;
+    position:relative;
+}
+</code></pre>
+
+<p>and obviously include <a href="https://github.com/hicTech/cssPlus/blob/master/css/build/core.css" rel="nofollow">css+ 0.2 core</a></p>
+
+<p>hear the <a href="http://jsfiddle.net/dL5eujkk/" rel="nofollow">fiddle</a></p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/34026625/5922857" title="short permalink to this answer" class="short-link" id="link-post-34026625">share</a><span class="lsep">|</span><a href="/posts/34026625/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="#"
+       class="flag-post-link"
+       title="flag this post for serious problems or moderator attention"
+       data-postid="34026625">flag</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-12-01 17:41:54Z" class="relativetime">Dec 1 '15 at 17:41</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/1059966/marconi"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/wB2px.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/1059966/marconi">Marconi</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,236</span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-34026625" class="comments js-comments-container  dno">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="true"
+                        data-cansee="false"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="false">
+
+                </ul>
+				    <div class="comment-form">
+					    <form id="add-comment-34026625" 
+							    class="" 
+							    data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+				    </div>
+	    </div>
+
+        <div id="comments-link-34026625" >
+
+                <a class="js-add-link comments-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   href=#>add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+                                    <a name='new-answer'></a>
+                        <form id="post-form" action="/questions/15381172/answer/submit" method="post"  class="post-form">
+                            <input type="hidden" id="post-id" value="15381172" />
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" />
+                            <input type="hidden" name="referrer" value="https://www.google.com.ua/"/>
+                            <h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                StackExchange.prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                showLowRepImageUploadWarning: false,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: false,
+                    discardSelector: ".discard-answer"
+                    
+                    });
+                
+
+        }
+    });
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;"> 
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+    <div class="community-option g-row ai-center f-checkbox">
+        <div class="g-col -input">
+            <input id="communitymode" name="communitymode" type="checkbox" >
+        </div>
+        <div class="g-col">
+            <label for="communitymode" class="f-label _small" title="Marking an answer community wiki encourages others to edit it by lowering the reputation barrier required to edit. However, you will not gain any upvote reputation from it. This cannot be undone.">community wiki</label>
+        </div>
+    </div>
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="3a92f8f3748503c6839c544eea48d122ca55bf2318b23a079cc402a30ec82d18">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+
+                            <div style="position: relative;">
+                                
+                                
+                            </div>
+
+                                                            <div class="form-submit cbt">
+                                        <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+                                    <a href="#" class="btn-clear discard-answer dno">discard</a>
+                                </div>
+                        </form>
+
+
+
+                        <h2 class="bottom-notice" data-loc="1">
+Not the answer you&#39;re looking for?                            Browse other questions tagged <a href="/questions/tagged/css" class="post-tag" title="show questions tagged &#39;css&#39;" rel="tag">css</a> <a href="/questions/tagged/css3" class="post-tag" title="show questions tagged &#39;css3&#39;" rel="tag">css3</a> <a href="/questions/tagged/flexbox" class="post-tag" title="show questions tagged &#39;flexbox&#39;" rel="tag">flexbox</a>  or <a href="/questions/ask">ask your own question</a>.                        </h2>
+            </div>
+        </div>
+                <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+                            <div class="module question-stats">
+                    <table id="qinfo">
+                        <tr>
+                            <td>
+                                <p class="label-key">asked</p>
+                            </td>
+                            <td style="padding-left: 10px">
+                                <p class="label-key" title="2013-03-13 09:19:00Z"><b>5 years ago</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label-key">viewed</p>
+                            </td>
+
+                            <td style="padding-left: 10px">
+                                <p class="label-key">
+                                    <b>278,884 times</b>
+                                </p>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p class="label-key">active</p>
+                                </td>
+                                <td style="padding-left: 10px">
+                                    <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2017-11-14 12:44:36Z">4 months ago</a></b></p>
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+            <div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr />
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://stackoverflow.blog/2018/03/13/2018-developer-survey-results-live/" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Blog&quot;,&quot;https://stackoverflow.blog/2018/03/13/2018-developer-survey-results-live/&quot;,null,null]">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+        </div>
+        <div class="bulletin-item-content">
+            <a href="https://stackoverflow.blog/2018/03/13/2018-developer-survey-results-live/" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Blog&quot;,&quot;https://stackoverflow.blog/2018/03/13/2018-developer-survey-results-live/&quot;,null,null]">The 2018 Developer Survey Results are Live</a>
+        </div>
+        <br class="cbt" />
+    </div>
+                <div class="bulletin-title">
+                    Upcoming Events
+                </div>
+                <hr />
+    <div class="spacer bulletin-item-important">
+        
+    <div class="bulletin-item-type"><a href="https://stackoverflow.com/election" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Upcoming Events&quot;,&quot;https://stackoverflow.com/election&quot;,null,null]"><div class="favicon favicon-stackoverflow" title="Stack Overflow"></div></a></div>
+    <div class="bulletin-item-content">
+        <a href="https://stackoverflow.com/election" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Upcoming Events&quot;,&quot;https://stackoverflow.com/election&quot;,null,null]">2018 Community Moderator Election</a>
+        <div>ends <span title="2018-03-27 20:00:00Z">Mar 27</span></div>
+    </div>
+    <br class="cbt" />
+</div>
+                <div class="bulletin-title">
+                    Featured on Meta
+                </div>
+                <hr />
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://meta.stackexchange.com/questions/307744/planned-maintenance-scheduled-for-march-17-2018-at-1300-utc-9am-us-eastern" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackexchange.com/questions/307744/planned-maintenance-scheduled-for-march-17-2018-at-1300-utc-9am-us-eastern&quot;,null,null]">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+        </div>
+        <div class="bulletin-item-content">
+            <a href="https://meta.stackexchange.com/questions/307744/planned-maintenance-scheduled-for-march-17-2018-at-1300-utc-9am-us-eastern" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackexchange.com/questions/307744/planned-maintenance-scheduled-for-march-17-2018-at-1300-utc-9am-us-eastern&quot;,null,null]">Planned maintenance scheduled for March 17, 2018 at 13:00 UTC (9AM US/Eastern)</a>
+        </div>
+        <br class="cbt" />
+    </div>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://meta.stackexchange.com/questions/307862/ch-ch-ch-changes-left-nav-responsive-design-themes" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackexchange.com/questions/307862/ch-ch-ch-changes-left-nav-responsive-design-themes&quot;,null,null]">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+        </div>
+        <div class="bulletin-item-content">
+            <a href="https://meta.stackexchange.com/questions/307862/ch-ch-ch-changes-left-nav-responsive-design-themes" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackexchange.com/questions/307862/ch-ch-ch-changes-left-nav-responsive-design-themes&quot;,null,null]">Ch-ch-ch-changes: Left nav, responsive design, &amp; themes</a>
+        </div>
+        <br class="cbt" />
+    </div>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://meta.stackoverflow.com/questions/364145/coming-soon-stack-overflow-for-teams" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackoverflow.com/questions/364145/coming-soon-stack-overflow-for-teams&quot;,null,null]">
+<div class="favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>                </a>
+        </div>
+        <div class="bulletin-item-content">
+            <a href="https://meta.stackoverflow.com/questions/364145/coming-soon-stack-overflow-for-teams" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackoverflow.com/questions/364145/coming-soon-stack-overflow-for-teams&quot;,null,null]">Coming Soon: Stack Overflow For Teams!</a>
+        </div>
+        <br class="cbt" />
+    </div>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://meta.stackoverflow.com/questions/364498/2018-moderator-election-qa-questionnaire" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackoverflow.com/questions/364498/2018-moderator-election-qa-questionnaire&quot;,null,null]">
+<div class="favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>                </a>
+        </div>
+        <div class="bulletin-item-content">
+            <a href="https://meta.stackoverflow.com/questions/364498/2018-moderator-election-qa-questionnaire" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Featured on Meta&quot;,&quot;https://meta.stackoverflow.com/questions/364498/2018-moderator-election-qa-questionnaire&quot;,null,null]">2018 Moderator Election Q&amp;A - Questionnaire</a>
+        </div>
+        <br class="cbt" />
+    </div>
+    </div>
+</div>            
+<div id="dfp-tsb" class="everyonelovesstackoverflow"></div>
+            <div id="hireme"></div>
+<script>;window.clc=window.clc||{},window.clc.init=window.clc.init||function(a){var b=window,c=b.document;try{if('function'!=typeof[].indexOf||!window.addEventListener||!a.allowed)return;var d=new RegExp(a.allowed);if(!d.test(location.hostname))return;if(b.clc.options)for(var e in b.clc.options)a[e]=b.clc.options[e];b.clc.cmd='undefined'==typeof b.clc.cmd?[]:b.clc.cmd,b.clc.autoload=b.clc.autoload||function(){'function'==typeof b.clc.load?b.clc.load():b.clc.cmd.push(function(a){a.load()})};var f=a.wv;if(c.hidden&&f)return void c.addEventListener('visibilitychange',function b(){c.hidden||(window.clc.init(a),c.removeEventListener('visibilitychange',b))});b.clc.options=a,a.al&&b.clc.autoload();var g=/Trident/i.test(navigator.userAgent)?a.lib.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2'):a.lib,h=c.createElement('script');h.async=!0,h.src=g,c.body.appendChild(h)}catch(a){}},window.clc.loadDisplayAds=window.clc.loadDisplayAds||function(){function a(b){b.style.height=b.style.maxHeight=b.style.minHeight='auto',b.style.display='IFRAME'===b.tagName?'none':'block',[].forEach.call(b.children,a)}function b(a){new Image().src='https://'+e+'/stalled.gif?'+a}var c=window,d=c.document,e="clc.stackoverflow.com",f={slots:{lb:[[728,90]],mlb:[[728,90]],sb:[[300,250],[300,600]],"tag-sponsorship":[[730,135]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-tsb":'sb',"dfp-tag":'tag-sponsorship',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}},g=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':'question-pages',h=location.hostname;/^clc\./.test(location.hostname)&&(h='test/dev.stackoverflow.com');var i=[4385506061,4386578282,4386579572];return function(e){var j=(e&&0<e.length?e:Object.keys(f.ids)).map(function(a){return d.getElementById(a)}).filter(function(a){return!!a&&/^\s*$/.test(a.innerHTML)}).map(function(a){return a.id});if(0!==j.length){c.googletag=c.googletag||{},c.googletag.cmd=c.googletag.cmd||[],c.googletag.cmd.push(function(){var e=c.googletag,k=d.createElement('div');k.className='adsbox',k.id='clc-abd',k.style.position='absolute',k.style.pointerEvents='none',k.innerHTML='&nbsp;',d.body.appendChild(k);var l=e.pubads();l.enableSingleRequest(),l.addEventListener('slotRenderEnded',function(c){var e=c.serviceName,f=c.slot,g=c.lineItemId;try{var h=f.getSlotElementId(),j=[];h||j.push('id=0');var k=d.getElementById(h);if(!h||k?k.hasAttribute('data-clc-stalled')&&j.push('st=1'):j.push('el=0'),0!==j.length)return void b(j.join('&'));-1===i.indexOf(g)?k.setAttribute('data-clc-prefilled','true'):a(k),k.setAttribute('data-clc-ready','true')}catch(a){var l=d.getElementById('dfp-tsb')||d.getElementById('clc-tsb');l&&l.setAttribute('data-clc-ready','true'),b('e=1')}});var m=c.dfp_targeting||{};m&&Object.keys(m).forEach(function(a){l.setTargeting(a,m[a])});for(var n=0,o=j;n<o.length;n++){var p=o[n],q=f.ids[p],r=f.slots[q],s='/'+'248424177'+'/'+h+'/'+q+'/'+g,t=e.defineSlot(s,r,p);('tag-sponsorship'===q||'sb'==q)&&t.setCollapseEmptyDiv(!0,!0),t.addService(l),!1}e.enableServices();for(var p,u=0,v=j;u<v.length;u++)p=v[u],e.display(p)});var k=d.createElement('script');k.async=!0,k.src='https://www.googletagservices.com/tag/js/gpt.js',document.body.appendChild(k)}}}(),window.clc.init.call(null, {"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=f8824d465ad6","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=905391554886","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false});</script>            <script>
+window.clc_request='AsW97HBXi9UIh4l3ALSy6gACAAAAAgAAAAMSAAAAfGNzc3xjc3MzfGZsZXhib3h8AIiART5hZ7ebXog';                    clc.autoload();
+                var dfp_targeting={Registered:['true'],Reputation:['200'],'so-tag':['css','css3','flexbox'],IsHighRepEarner:['true']};                                    clc.loadDisplayAds();
+            </script><div class="module" id="chat-feature">
+
+    <h4><a href="http://chat.stackoverflow.com" id="h-chat-link">Visit Chat</a></h4>
+    <div class="related" id="ad502-rooms"></div>
+    <script>
+    // <!--
+        StackExchange.ready(
+        function () {
+            var options = {
+                chatUrl: 'http://chat.stackoverflow.com',
+                reloadUrl: '/api/recent-chat',
+                preloadData: {"activeUsers":144,"activeRooms":61,"rooms":[{"name":"JavaScript","id":17,"lastPost":1521212473,"posts":4644465,"users":[{"name":"hilli_micha","id":3453216,"emailhash":"!https://i.stack.imgur.com/GRYNK.jpg?s=128\u0026g=1","lastPost":1521212459},{"name":"rlemon","id":829835,"emailhash":"!https://i.stack.imgur.com/TteD0.jpg?s=128\u0026g=1","lastPost":1521212455},{"name":"Kamil Solecki","id":2534346,"emailhash":"!https://i.stack.imgur.com/PnMP0.jpg?s=128\u0026g=1","lastPost":1521212454},{"name":"Cereal","id":2424975,"emailhash":"!https://i.stack.imgur.com/jDtKZ.jpg?s=128\u0026g=1","lastPost":1521212433},{"name":"Caprica Six","id":1839506,"emailhash":"!https://i.stack.imgur.com/Sej2t.jpg?s=128\u0026g=1","lastPost":1521212413},{"name":"Neoares","id":3337752,"emailhash":"!https://i.stack.imgur.com/amtjk.jpg?s=128\u0026g=1","lastPost":1521212408},{"name":"Sterling Archer","id":774078,"emailhash":"!https://i.stack.imgur.com/V2VL3.png?s=128\u0026g=1","lastPost":1521212401}],"messages":[{"date":1521212473,"user":"Sterling Archer","userid":774078}],"singleImage":false,"tags":["ecmascript","ecmascript-6","javascript","nodejs"]},{"name":"SO Close Vote Reviewers","id":41570,"lastPost":1521212357,"posts":791941,"users":[{"name":"Vadim Kotov","id":1000551,"emailhash":"2d8cb0eaa4de7f781e42328ec7544ca3","lastPost":1521212357},{"name":"Cœur","id":1033581,"emailhash":"e8891617e36b8d1254eb3ce1a5662da4","lastPost":1521212123},{"name":"Nkosi","id":5233410,"emailhash":"!https://i.stack.imgur.com/4ehMg.png?s=128\u0026g=1","lastPost":1521211758},{"name":"NathanOliver","id":4342498,"emailhash":"!https://i.stack.imgur.com/l3j88.jpg?s=128\u0026g=1","lastPost":1521211056},{"name":"Jon Clements","id":1252759,"emailhash":"!https://i.stack.imgur.com/E1sVR.jpg?s=128\u0026g=1","lastPost":1521210992},{"name":"Machavity","id":2370483,"emailhash":"c11f2b4035a85ed55486ef537d546e92","lastPost":1521210957},{"name":"Compass","id":2958086,"emailhash":"!https://i.stack.imgur.com/5iJz9.png?s=128\u0026g=1","lastPost":1521210387}],"messages":[{"date":1521212357,"user":"Vadim Kotov","userid":1000551}],"singleImage":false,"tags":["discussion","moderation","review"]}]} 
+            };
+
+            StackExchange.chatAd.init(options);
+        });
+    // -->
+    </script>
+
+</div>
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="/q/48588358" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="/questions/48588358/equal-height-columns-using-flexbox-grid?noredirect=1" class="question-hyperlink">Equal height columns using Flexbox Grid</a>
+</div>
+<div class="spacer">
+	<a href="/q/33048404" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="/questions/33048404/how-to-make-a-table-fill-available-height-in-chrome?noredirect=1" class="question-hyperlink">How to make a table fill available height in Chrome?</a>
+</div>
+<div class="spacer">
+	<a href="/q/14962468" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">49</div>
+	</a>
+	<a href="/questions/14962468/flexbox-and-vertical-scroll-in-a-full-height-app-using-newer-flexbox-api?noredirect=1" class="question-hyperlink">Flexbox and vertical scroll in a full-height app using NEWER flexbox api</a>
+</div>
+<div class="spacer">
+	<a href="/q/20959600" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">63</div>
+	</a>
+	<a href="/questions/20959600/height-100-on-flexbox-column-child?noredirect=1" class="question-hyperlink">Height 100% on flexbox column child</a>
+</div>
+<div class="spacer">
+	<a href="/q/7676022" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">19</div>
+	</a>
+	<a href="/questions/7676022/html5-flexible-box-model-height-calculation?noredirect=1" class="question-hyperlink">HTML5 flexible box model height calculation</a>
+</div>
+<div class="spacer">
+	<a href="/q/18639129" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">14</div>
+	</a>
+	<a href="/questions/18639129/how-to-make-nested-flexboxes-work?noredirect=1" class="question-hyperlink">how to make nested flexboxes work</a>
+</div>
+<div class="spacer">
+	<a href="/q/35532987" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">10</div>
+	</a>
+	<a href="/questions/35532987/heights-rendering-differently-in-chrome-and-firefox?noredirect=1" class="question-hyperlink">Heights rendering differently in Chrome and Firefox</a>
+</div>
+<div class="spacer">
+	<a href="/q/35525497" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">5</div>
+	</a>
+	<a href="/questions/35525497/scrollable-content-elements-with-angular-material-dynamic-height-tabs?noredirect=1" class="question-hyperlink">Scrollable content elements with Angular Material dynamic-height tabs</a>
+</div>
+<div class="spacer">
+	<a href="/q/44075840" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="/questions/44075840/flexbox-100-height-issue?noredirect=1" class="question-hyperlink">Flexbox 100% height Issue</a>
+</div>
+<div class="spacer">
+	<a href="/q/26936145" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">2</div>
+	</a>
+	<a href="/questions/26936145/100-width-height-anchor-inside-flexbox-for-webkit-browsers?noredirect=1" class="question-hyperlink">100% width &amp; height Anchor inside flexbox for Webkit Browsers</a>
+</div>					<div class="spacer more">
+				<a href="/questions/linked/15381172">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+                <div class="module sidebar-related">
+                    <h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer"><a href="/q/90178" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1242</div></a><a href="/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space" class="question-hyperlink">Make a div fill the height of the remaining screen space</a></div><div class="spacer"><a href="/q/450903" title="Vote score (upvotes - downvotes)"><div class="answer-votes extra-large">1588</div></a><a href="/questions/450903/how-to-make-div-not-larger-than-its-contents" class="question-hyperlink">How to make div not larger than its contents?</a></div><div class="spacer"><a href="/q/485827" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">702</div></a><a href="/questions/485827/css-100-height-with-padding-margin" class="question-hyperlink">CSS 100% height with padding/margin</a></div><div class="spacer"><a href="/q/1575141" title="Vote score (upvotes - downvotes)"><div class="answer-votes extra-large">1577</div></a><a href="/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window" class="question-hyperlink">How to make a div 100% height of the browser window?</a></div><div class="spacer"><a href="/q/3508605" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1479</div></a><a href="/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css" class="question-hyperlink">How can I transition height: 0; to height: auto; using CSS?</a></div><div class="spacer"><a href="/q/6654958" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">577</div></a><a href="/questions/6654958/make-body-have-100-of-the-browser-height" class="question-hyperlink">Make body have 100% of the browser height</a></div><div class="spacer"><a href="/q/30622938" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="/questions/30622938/set-parent-height-width-according-to-child-in-display-flexbox" class="question-hyperlink">set parent height/width according to child in display flexbox</a></div><div class="spacer"><a href="/q/32551291" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">354</div></a><a href="/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties" class="question-hyperlink">In CSS Flexbox, why are there no &ldquo;justify-items&rdquo; and &ldquo;justify-self&rdquo; properties?</a></div><div class="spacer"><a href="/q/33365925" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="/questions/33365925/why-isnt-height-100-and-absolute-positioning-working-in-flexbox" class="question-hyperlink">Why isn&#39;t `height: 100%` and absolute positioning working in flexbox?</a></div><div class="spacer"><a href="/q/33636796" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">128</div></a><a href="/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent" class="question-hyperlink">Chrome / Safari not filling 100% height of flex parent</a></div>
+                    </div>
+                </div>
+
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot"
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="https://money.stackexchange.com/questions/92039/whats-the-best-way-to-maintain-your-credit-score-after-paying-off-all-of-your-d" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What&#39;s the best way to maintain your credit score after paying off all of your debt?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-networkengineering" title="Network Engineering Stack Exchange"></div><a href="https://networkengineering.stackexchange.com/questions/49173/how-does-ethernet-switch-ensures-the-validity-of-the-mac-address-table" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:496 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does Ethernet Switch ensures the validity of the MAC address table?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/11790/how-to-ask-for-a-wish-from-a-woman" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to ask for a wish from a woman?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/435644/what-is-the-word-for-the-space-left-behind-when-a-shape-is-removed" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the word for &quot;the space left behind when a shape is removed&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="https://security.stackexchange.com/questions/181580/why-is-math-random-not-designed-to-be-cryptographically-secure" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is Math.random() not designed to be cryptographically secure?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/11850/how-to-decline-a-polite-but-insincere-request" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to decline a polite but insincere request
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/107142/why-would-magicians-be-scared-of-regular-people" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why would magicians be scared of regular people?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/117547/can-the-suggestion-to-sleep-during-combat-ever-be-reasonable" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can the Suggestion to &quot;sleep&quot; during combat *ever* be reasonable?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tridion" title="Tridion Stack Exchange"></div><a href="https://tridion.stackexchange.com/questions/18583/taxonomy-customization-in-schema" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:485 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Taxonomy customization In Schema
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2693481/why-did-this-extraneous-root-creep-into-the-solution" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did this extraneous root creep into the solution?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/107195/could-the-development-of-a-body-armour-that-completely-stop-any-small-arms-fire" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Could the development of a body armour that completely stop any small arms&#39; fire make a civilization go back to medieval-style combat?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/158269/insist-on-a-new-filename" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Insist on a new filename
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="https://tex.stackexchange.com/questions/420481/unwanted-spaces-in-user-defined-structures-and-the-uses-of" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Unwanted spaces in user defined structures and the uses of %
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/158354/horizontally-aligned-ascii-art" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Horizontally Aligned ASCII Art
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="https://bicycles.stackexchange.com/questions/52599/i-rode-a-childrens-bike-now-the-chain-is-sagging-is-it-ok-to-shorten-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I rode a children&#39;s bike, now the chain is sagging - is it ok to shorten it?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/435385/equivalent-english-phrase-for-dont-roll-around-where-youve-fallen" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Equivalent English phrase for &quot;don&#39;t roll around where you&#39;ve fallen&quot;
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="https://puzzling.stackexchange.com/questions/61997/a-riddle-to-make-a-channel-queasy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    A riddle to make a channel queasy
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="https://money.stackexchange.com/questions/92026/how-can-i-make-any-sort-of-profit-in-day-trading-if-the-price-doesnt-rise-much" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I make any sort of profit in day-trading if the price doesn&#39;t rise much after I buy stock?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="https://unix.stackexchange.com/questions/430616/why-some-umask-values-dont-have-effect" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why some umask values don&#39;t have effect?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="https://stackoverflow.com/questions/49319896/implicit-special-functions-when-would-they-be-ill-formed" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Implicit special functions: when would they be ill-formed?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="https://travel.stackexchange.com/questions/111146/what-is-the-easiest-place-to-cross-the-us-rocky-mountains-going-to-oregon-in-a" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the easiest place to cross the US Rocky Mountains, going to Oregon, in a large truck?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/435038/whats-a-word-to-describe-an-apartment-when-its-owners-are-on-vacation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What&#39;s a word to describe an apartment when its owners are on vacation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/11843/how-to-let-someone-know-he-hurt-me-without-spreading-negative-feelings" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to let someone know he hurt me without spreading negative feelings
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="https://puzzling.stackexchange.com/questions/62026/what-is-the-rule-for-these-number-sequences" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the rule for these number sequences?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+
+<div id="feed-link">
+    <a href="/feeds/question/15381172" title="feed of this question and its answers">
+        <svg aria-hidden="true" class="svg-icon fc-orange-400 iconRss" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0 1 10 10h2.5zm-5 0A7.5 7.5 0 0 0 3 7.5V10a5 5 0 0 1 5 5h2.5zm-5 0A2.5 2.5 0 0 0 3 12.5V15h2.5z"/></svg>
+        question feed
+    </a>
+</div>
+        </div>
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/15381172/ivc/669b');});</script>
+<noscript><div><img src="/posts/15381172/ivc/669b" class="dno" alt="" width="0" height="0"></div></noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+    <script>
+        $('#wmd-input').one("keypress", function() {
+            $.ajax({
+                url: '/accounts/email-settings-form',
+                cache: false,
+                success: function(data) {
+                    $('#submit-button').parent().prepend(data);
+                }
+            });
+        });
+
+    </script>
+
+        </div>
+    </div>
+
+    <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+                <div class="site-footer--logo">
+
+                    <a href="https://stackoverflow.com"><svg aria-hidden="true" class="svg-icon native iconLogoGlyphMd" width="32" height="37" viewBox="0 0 32 37"><g><path fill="#BCBBBB" d="M26 33v-9h4v13H0V24h4v9z"/><path d="M23.1 25.99l.68-2.95-16.1-3.35L7 23l16.1 2.99zM9.1 15.2l15 7 1.4-3-15-7-1.4 3zm4.2-7.4L26 18.4l2.1-2.5L15.4 5.3l-2.1 2.5zM21.5 0l-2.7 2 9.9 13.3 2.7-2L21.5 0zM7 30h16v-3H7v3z" fill="#F48024"/></g></svg></a>
+                </div>
+            
+            <nav class="site-footer--nav">
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://stackoverflow.com" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 15})">Stack Overflow</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="/questions" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 16})">Questions</a></li>
+                                <li class="-item"><a href="https://stackoverflow.com/jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 17})">Jobs</a></li>
+                                <li class="-item"><a href="https://stackoverflow.com/jobs/directory/developer-jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 11})">Developer Jobs Directory</a></li>
+                                     <li class="-item"><a href="https://stackoverflow.com/jobs/salary" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 28})">Salary Calculator</a></li>
+                                                            <li class="-item"><a href="/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 3 })">Help</a></li>
+                                <li class="-item"><a onclick='StackExchange.switchMobile("on")' class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 12 })">Mobile</a></li>
+                        </ul>
+                    </div>
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://www.stackoverflowbusiness.com/?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-business-category" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 19 })">Stack Overflow<br /> Business</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/talent?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-talent" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 20 })">Talent</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/advertise?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-advertise" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 21 })">Ads</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/enterprise?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-enterprise" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 22 })">Enterprise</a></li>
+                        </ul>
+                    </div>
+                <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Company</a></h5>
+                    <ul class="-list">
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">About</a></li>
+                                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 27 })" href="https://stackoverflow.com/company/press">Press</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 9 })" href="https://stackoverflow.com/company/work-here">Work Here</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 7 })" href="https://stackexchange.com/legal">Legal</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 8 })" href="https://stackexchange.com/legal/privacy-policy">Privacy Policy</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 13 })" href="https://stackoverflow.com/company/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer--col site-footer--categories-nav site-footer--col__visible">
+                    <a href="#" class="site-footer--back js-footer-back"><svg aria-hidden="true" class="svg-icon iconArrowLeftAlt" width="18" height="18" viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7z"/></svg></a>
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com">Stack Exchange<br> Network</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Technology">Technology</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Life / Arts">Life / Arts</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Culture / Recreation">Culture / Recreation</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Science">Science</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Other">Other</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-footer--categories">
+                    <div class="site-footer--col site-footer--category js-footer-col" data-name="Technology">
+        <ul class="-list">
+                <li class="-item"><a href="https://stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                <li class="-item"><a href="https://serverfault.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="system and network administrators">Server Fault</a></li>
+                <li class="-item"><a href="https://superuser.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="computer enthusiasts and power users">Super User</a></li>
+                <li class="-item"><a href="https://webapps.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="power users of web applications">Web Applications</a></li>
+                <li class="-item"><a href="https://askubuntu.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                <li class="-item"><a href="https://webmasters.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="pro webmasters">Webmasters</a></li>
+                <li class="-item"><a href="https://gamedev.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional and independent game developers">Game Development</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://tex.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                <li class="-item"><a href="https://softwareengineering.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                <li class="-item"><a href="https://unix.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                <li class="-item"><a href="https://apple.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                <li class="-item"><a href="https://wordpress.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="WordPress developers and administrators">WordPress Development</a></li>
+                <li class="-item"><a href="https://gis.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                <li class="-item"><a href="https://electronics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://android.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                <li class="-item"><a href="https://security.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="information security professionals">Information Security</a></li>
+                <li class="-item"><a href="https://dba.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                <li class="-item"><a href="https://drupal.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Drupal developers and administrators">Drupal Answers</a></li>
+                <li class="-item"><a href="https://sharepoint.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="SharePoint enthusiasts">SharePoint</a></li>
+                <li class="-item"><a href="https://ux.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="user experience researchers and experts">User Experience</a></li>
+                <li class="-item"><a href="https://mathematica.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of Wolfram Mathematica">Mathematica</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://salesforce.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                <li class="-item"><a href="https://expressionengine.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                <li class="-item"><a href="https://pt.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programadores profissionais e entusiastas">Stack Overflow em Portugu&#234;s</a></li>
+                <li class="-item"><a href="https://blender.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people who use Blender to create 3D graphics, animations, or games">Blender</a></li>
+                <li class="-item"><a href="https://networkengineering.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="network engineers">Network Engineering</a></li>
+                <li class="-item"><a href="https://crypto.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                <li class="-item"><a href="https://codereview.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="peer programmer code reviews">Code Review</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://magento.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of the Magento e-Commerce platform">Magento</a></li>
+                <li class="-item"><a href="https://softwarerecs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people seeking specific software recommendations">Software Recommendations</a></li>
+                <li class="-item"><a href="https://dsp.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                <li class="-item"><a href="https://emacs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those using, extending or developing Emacs">Emacs</a></li>
+                <li class="-item"><a href="https://raspberrypi.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                <li class="-item"><a href="https://ru.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="программистов">Stack Overflow на русском</a></li>
+                <li class="-item"><a href="https://codegolf.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://es.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programadores y profesionales de la inform&#225;tica">Stack Overflow en espa&#241;ol</a></li>
+                <li class="-item"><a href="https://ethereum.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of Ethereum, the decentralized application platform and smart contract enabled blockchain">Ethereum</a></li>
+                <li class="-item"><a href="https://datascience.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Data science professionals, Machine Learning specialists, and those interested in learning more about the field">Data Science</a></li>
+                <li class="-item"><a href="https://arduino.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="developers of open-source hardware and software that is compatible with Arduino">Arduino</a></li>
+                <li class="-item"><a href="https://bitcoin.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Bitcoin crypto-currency enthusiasts">Bitcoin</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (28)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts">
+        <ul class="-list">
+                <li class="-item"><a href="https://photo.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                <li class="-item"><a href="https://scifi.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                <li class="-item"><a href="https://graphicdesign.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                <li class="-item"><a href="https://movies.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                <li class="-item"><a href="https://music.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                <li class="-item"><a href="https://worldbuilding.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="writers/artists using science, geography and culture to construct imaginary worlds and settings">Worldbuilding</a></li>
+                <li class="-item"><a href="https://cooking.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://diy.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="contractors and serious DIYers">Home Improvement</a></li>
+                <li class="-item"><a href="https://money.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                <li class="-item"><a href="https://academia.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="academics and those enrolled in higher education">Academia</a></li>
+                <li class="-item"><a href="https://law.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="legal professionals, students, and others with experience or interest in law">Law</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (15)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation">
+        <ul class="-list">
+                <li class="-item"><a href="https://english.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                <li class="-item"><a href="https://skeptics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="scientific skepticism">Skeptics</a></li>
+                <li class="-item"><a href="https://judaism.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                <li class="-item"><a href="https://travel.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="road warriors and seasoned travelers">Travel</a></li>
+                <li class="-item"><a href="https://christianity.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                <li class="-item"><a href="https://ell.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="speakers of other languages learning English">English Language Learners</a></li>
+                <li class="-item"><a href="https://japanese.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://gaming.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                <li class="-item"><a href="https://bicycles.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                <li class="-item"><a href="https://rpg.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                <li class="-item"><a href="https://anime.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="anime and manga fans">Anime &amp; Manga</a></li>
+                <li class="-item"><a href="https://puzzling.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those who create, solve, and study puzzles">Puzzling</a></li>
+                <li class="-item"><a href="https://mechanics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (33)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Science">
+        <ul class="-list">
+                <li class="-item"><a href="https://mathoverflow.net" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional mathematicians">MathOverflow</a></li>
+                <li class="-item"><a href="https://math.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                <li class="-item"><a href="https://stats.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                <li class="-item"><a href="https://cstheory.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                <li class="-item"><a href="https://physics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="active researchers, academics and students of physics">Physics</a></li>
+                <li class="-item"><a href="https://chemistry.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="scientists, academics, teachers and students">Chemistry</a></li>
+                <li class="-item"><a href="https://biology.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="biology researchers, academics, and students">Biology</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Science"><ul class="-list">
+                <li class="-item"><a href="https://cs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                <li class="-item"><a href="https://philosophy.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (10)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Other">
+        <ul class="-list">
+                <li class="-item"><a href="https://meta.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                <li class="-item"><a href="https://stackapps.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                <li class="-item"><a href="https://api.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programmatic interaction with Stack Exchange sites">API</a></li>
+                <li class="-item"><a href="https://data.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="querying Stack Exchange data using SQL">Data</a></li>
+                <li class="-item"><a href="https://area51.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                    </ul>
+    </div>
+                </div>
+            </nav>
+            <div class="site-footer--copyright fs-fine">
+                <ul class="-list">
+                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog?blb=1">Blog</a></li>
+                    <li class="-item"><a href="https://www.facebook.com/officialstackoverflow/" class="-link">Facebook</a></li>
+                    <li class="-item"><a href="https://twitter.com/stackoverflow" class="-link">Twitter</a></li>
+                    <li class="-item"><a href="https://linkedin.com/company/stack-overflow" class="-link">LinkedIn</a></li>
+                </ul>
+
+                <p class="mt-auto mb24">
+site design / logo &#169; 2018 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a>
+                            with <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license">attribution required</a>.
+                    <span id="svnrev">rev&nbsp;2018.3.16.29461</span>
+                </p>
+            </div>
+        </div>
+
+            </footer>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled
+        </div>
+    </noscript>
+
+<script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                var trackingCodes = [
+                    'UA-5620270-1'
+                ];
+
+                        trackingCodes.push('UA-108242619-1');
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: trackingCodes
+                });
+
+                    StackExchange.ga.setDimension('dimension1', '7833991');
+
+                    StackExchange.ga.setDimension('dimension10', 'PassivelyLooking');
+
+                    StackExchange.ga.setDimension('dimension2', '|css|css3|flexbox|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+                StackExchange.ga.trackPageView();
+            });
+            
+/**/
+            
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+/**/
+                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
+</script>
+        
+    
+    </body>
+</html>

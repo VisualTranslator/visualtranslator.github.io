@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.top {
+  padding: 20px 40px;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.column {
+	flex: 0 0 50%;
+  font-weight: 200;
+}
+
+#example {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.features {
+	justify-content: center;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  margin-bottom: 20px;
+}
+
+.feature span {
+  display: block;
+}
+
+.feature .title {
+	font-size: 2.3em;
+  font-weight: 200;
+	color: #222222;
+}
+
+.feature .description {
+  font-size: 1em;
+	color: #adadad;
+}
+
+.download {
+  margin-top: 50px;
+}
+
+.download .button {
+  font-weight: 600;
+	background: #1CDB89;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 3px;
+	-webkit-box-shadow: 0px 2px 10px 0px rgba(28,219,137,0.8);
+	-moz-box-shadow: 0px 2px 10px 0px rgba(28,219,137,0.8);
+	box-shadow: 0px 2px 10px 0px rgba(28,219,137,0.8);
+  transition: all 0.5s;
+}
+
+.download .button:hover {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(28,219,137,0.8);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(28,219,137,0.8);
+  box-shadow: 0px 5px 15px 0px rgba(28,219,137,0.8);
+}
+
+.download .version {
+  font-size: 0.7em;
+  padding-left: 30px;
+}
+
+.download .version .os {
+  font-weight: 400;
+}
