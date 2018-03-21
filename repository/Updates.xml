@@ -1,0 +1,17 @@
+<Updates>
+ <ApplicationName>{AnyApplication}</ApplicationName>
+ <ApplicationVersion>1.0.0</ApplicationVersion>
+ <Checksum>true</Checksum>
+ <PackageUpdate>
+  <Name>com.semanser.visualtranslator</Name>
+  <DisplayName>VisualTranslator core</DisplayName>
+  <Description>Main component</Description>
+  <Version>0.1.0</Version>
+  <ReleaseDate>2018-03-19</ReleaseDate>
+  <ForcedInstallation>true</ForcedInstallation>
+  <RequiresAdminRights>true</RequiresAdminRights>
+  <UpdateFile CompressedSize="24607455" OS="Any" UncompressedSize="72623038"/>
+  <DownloadableArchives>bearer.7z,iconengines.7z,imageformats.7z,platforms.7z,styles.7z,tessdata.7z,translations.7z,content.7z</DownloadableArchives>
+  <SHA1>bc13934d280424a04d59315368df30235769fd73</SHA1>
+ </PackageUpdate>
+</Updates>
