@@ -6,12 +6,12 @@
   <Name>com.semanser.visualtranslator</Name>
   <DisplayName>VisualTranslator core</DisplayName>
   <Description>Main component</Description>
-  <Version>0.1.2</Version>
+  <Version>0.1.3</Version>
   <ReleaseDate>2018-03-21</ReleaseDate>
   <ForcedInstallation>true</ForcedInstallation>
   <RequiresAdminRights>true</RequiresAdminRights>
-  <UpdateFile CompressedSize="24609445" OS="Any" UncompressedSize="72626110"/>
+  <UpdateFile CompressedSize="24605577" OS="Any" UncompressedSize="72627646"/>
   <DownloadableArchives>bearer.7z,iconengines.7z,imageformats.7z,platforms.7z,styles.7z,tessdata.7z,translations.7z,content.7z</DownloadableArchives>
-  <SHA1>1af7f21fcd6ccc88c2cce92ad404338c01b70bd0</SHA1>
+  <SHA1>90c5dfce99474f142fdabc8537592414f9a48a91</SHA1>
  </PackageUpdate>
 </Updates>
