@@ -6,7 +6,7 @@
   <Name>com.semanser.visualtranslator</Name>
   <DisplayName>VisualTranslator core</DisplayName>
   <Description>Main component</Description>
-  <Version>0.1.1</Version>
+  <Version>0.1.0</Version>
   <ReleaseDate>2018-03-19</ReleaseDate>
   <ForcedInstallation>true</ForcedInstallation>
   <RequiresAdminRights>true</RequiresAdminRights>
